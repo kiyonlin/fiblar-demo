@@ -1,10 +1,10 @@
 {
-  "name": "angolar",
+  "name": "web",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod",
     "build:watch": "ng build --watch",
     "test": "ng test",
     "lint": "ng lint",

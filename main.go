@@ -11,7 +11,7 @@ func main() {
 
 	// serve Single Page application on "/web"
 	// assume static file at dist folder
-	app.Static("/", "dist")
+	app.Static("/", "public")
 
 	apiGroup := app.Group("/api")
 	{
@@ -21,7 +21,7 @@ func main() {
 	}
 
 	app.Get("/*", func(c *fiber.Ctx) {
-		if err := c.SendFile("dist/index.html"); err != nil {
+		if err := c.SendFile("public/index.html"); err != nil {
 			c.Next(fiber.ErrInternalServerError)
 		}
 	})
