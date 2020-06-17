@@ -1,5 +1,5 @@
 # `fiber` + `angular`
-[fiber](https://docs.gofiber.io/)是最近刚出道的一款基于[fasthttp]()的`web`框架。
+[fiber](https://docs.gofiber.io/)是最近出道的一款基于[fasthttp](https://github.com/valyala/fasthttp)的`web`框架。
 
 > *Fiber* is an Express inspired *web framework* build on top of Fasthttp, the *fastest* HTTP engine for Go. Designed to *ease* things up for *fast* development with *zero memory allocation* and *performance* in mind.
 
@@ -8,15 +8,16 @@
 > 环境：macos 10.15.4 + go 1.14.1 + fiber 1.11.1 + angular 9.1.6
 
 ## 新建项目
-我们创建一个新的目录叫`fiblar`：
+我们创建一个新的目录叫`fiblar-demo`：
 
 ```bash
-md fiblar && cd fiblar
+md fiblar-demo && cd fiblar-demo
 ```
 
 再使用`go mod`初始化项目：
+
 ```bash
-go mod init github.com/kiyonlin/fiblar
+go mod init github.com/kiyonlin/fiblar-demo
 ```
 
 新建一个`main.go`文件，内容如下：
@@ -136,7 +137,8 @@ exclude_dir = ["assets", "tmp", "vendor", "web"]
 
 ## 总结
 本文展示了综合`fiber`和`angular`开发`web`项目的一个小例子，权当抛砖引玉，有兴趣的同学可以继续深入研究。最后，我们稍微做下总结：
+
 - 通过`fiber`的静态文件服务，我们可以直接提供`angular`输出的`html`页面
 - 服务端拦截`api`路由，前端调用接口时，加上`api`前缀即可，无跨域问题，其他路由交给`angular`处理
 
-完整[Demo](http://github.com/kiyonlin/fiblar-demo)，以上。
+完整[demo](http://github.com/kiyonlin/fiblar-demo)，以上。
