@@ -9,7 +9,7 @@ func main() {
 	// Create new Fiber instance
 	app := fiber.New()
 
-	// serve Single Page application on "/web"
+	// serve Single Page application on "/public"
 	// assume static file at dist folder
 	app.Static("/", "public")
 
